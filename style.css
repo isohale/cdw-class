@@ -1,54 +1,90 @@
-/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 body {
-    background-color: #fff;
-    font-family: 'Roboto', sans-serif;
-    color: #111;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px 20px;
-  }
-  
-  h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-bottom: 0.5em;
-  }
-  
-  h2 {
-    font-size: 1.8em;
-    font-weight: normal;
-    margin-top: 2em;
-    margin-bottom: 0.5em;
-  }
-  
-  p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    margin-bottom: 1.5em;
-  }
-  
-  .content-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 2em;
-  }
-  
-  button {
-    font-size: 1em;
-    padding: 10px 20px;
-    background: #000;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background: #333;
-  }
-  
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  color: #111;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 40px;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+}
+
+header .left {
+  color: #aaa;
+}
+
+header .center {
+  font-weight: 400;
+  text-align: center;
+}
+
+header .center span {
+  font-size: 12px;
+  color: #888;
+}
+
+header .right a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+main {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.project-meta {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.project-title {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.project-subtitle {
+  font-size: 16px;
+  color: #999;
+  margin-bottom: 24px;
+}
+
+.advisor {
+  font-size: 14px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.section-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 40px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  color: #111;
+}
+
+img.content-image {
+  width: 100%;
+  height: auto;
+  margin: 40px 0;
+  display: block;
+}
