@@ -24,7 +24,7 @@ function draw() {
 ```
 For more information on getting started with p5.js see this tutorial: https://p5js.org/tutorials/get-started/
 
-
+<span style="color: red;">these code snippets need to be checked</span>
 ### 2  Primitives
 
 Basic geometric shapes are the building blocks of visual programming in p5.js. These primitive shapes can be combined to create complex designs and patterns.
