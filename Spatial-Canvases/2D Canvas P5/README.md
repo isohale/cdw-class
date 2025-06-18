@@ -1,5 +1,5 @@
 # Spatial Canvases 
-## 2-D Canvas in p5.js
+## 2D Canvas in p5.js
 ---
 
 ### 1  Setup vs Draw 

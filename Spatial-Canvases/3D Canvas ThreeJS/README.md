@@ -1,5 +1,5 @@
 # Spatial Canvases 
-## 3-D Canvas in Three.js
+## 3D Canvas in Three.js
 ---
 
 ### ❌ These code snippets need to be checked
