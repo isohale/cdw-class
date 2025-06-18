@@ -2,6 +2,7 @@
 ## 3-D Canvas in Three.js
 ---
 
+### ❌ These code snippets need to be checked
 ### 1  Setup vs Render Loop 
 
 The foundation of every Three.js application consists of two essential functions: `init()` and `animate()`. These functions control when and how often your code runs, creating the basic structure for 3D graphics, scenes, and animations.

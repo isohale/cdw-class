@@ -200,3 +200,8 @@ function draw() {
   myCircle.display();
 }
 ```
+
+For a more guided tutorial on the fundamentals of p5.js refer to these tutorials: https://p5js.org/tutorials/
+
+To learn more about color codes see: https://imagecolorpicker.com/
+
