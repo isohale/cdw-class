@@ -1,6 +1,7 @@
 # Introduction to Version Control
 ## Git and GitHub
-![logo_01](https://github.com/user-attachments/assets/95a19f0f-151a-40df-8e20-f4888424e8ff)
+![logo_02](https://github.com/user-attachments/assets/319dd75f-5b66-425f-bf13-aae537a1f21c)
+
 
 Welcome to this comprehensive tutorial on version control! This guide will walk you through the fundamentals of Git, its history, and how it's used professionally in modern software development.
 
