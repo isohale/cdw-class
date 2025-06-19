@@ -20,22 +20,22 @@ HTML provides the **foundation and framework** for your website. It defines the 
 **Key HTML Elements from our website:**
 ```html
 <!-- Basic HTML structure -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Module 1</title>
-  <link rel="stylesheet" href="style.css">
+<!DOCTYPE html>                    <!-- Declares this is an HTML5 document -->
+<html lang="en">                   <!-- Root element, lang="en" specifies English language -->
+<head>                             <!-- Contains metadata about the page (not visible) -->
+  <meta charset="UTF-8">           <!-- Sets character encoding for special characters -->
+  <title>Module 1</title>          <!-- Title that appears in browser tab -->
+  <link rel="stylesheet" href="style.css">  <!-- Links to our CSS file for styling -->
 </head>
-<body>
-  <!-- Content goes here -->
-  <script src="script.js"></script>
+<body>                             <!-- Contains all visible content on the page -->
+  <!-- Content goes here -->       <!-- Placeholder comment for where content would be -->
+  <script src="script.js"></script>  <!-- Links to our JavaScript file for interactivity -->
 </body>
 </html>
 
 <!-- Interactive elements with IDs for JavaScript -->
-<button id="demoButton">Click Me!</button>
-<div id="messageDisplay"></div>
+<button id="demoButton">Click Me!</button>  <!-- Clickable button with unique ID for JavaScript -->
+<div id="messageDisplay"></div>            <!-- Empty container div with ID for JavaScript to fill -->
 ```
 
 #### **CSS (Cascading Style Sheets) - The Design**
