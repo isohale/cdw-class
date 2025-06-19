@@ -141,45 +141,23 @@ While Git can be used entirely from the command line, we'll use **GitHub Desktop
 
 1. **In GitHub Desktop**: Click "Show in Explorer" (Windows) or "Show in Finder" (Mac)
 2. **Create a new file**: Right-click → New → Text Document
-3. **Name it**: `index.html`
+3. **Name it**: `hello-world.txt`
 4. **Open the file** in any text editor (Notepad, VS Code, etc.)
-5. **Add this HTML code**:
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Hello World</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-            background-color: #f0f0f0;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-    </style>
-</head>
-<body>
-    <h1>Hello, World! 🌍</h1>
-    <p>This is my first Git repository created with GitHub Desktop!</p>
-    <p>Welcome to version control!</p>
-</body>
-</html>
+5. **Add this simple text**:
+```
+Hello, World!
+This is my first Git repository created with GitHub Desktop.
+Welcome to version control!
 ```
 6. **Save the file**
 
 #### Step 4: Make Your First Commit
 
 1. **Return to GitHub Desktop**
-2. **You'll see**: Your new `index.html` file in the "Changes" tab
+2. **You'll see**: Your new `hello-world.txt` file in the "Changes" tab
 3. **Add a commit message**: 
-   - **Summary**: `Add Hello World HTML page`
-   - **Description**: `Created a simple HTML page with styling to demonstrate my first Git repository`
+   - **Summary**: `Add Hello World text file`
+   - **Description**: `Created a simple text file to demonstrate my first Git repository`
 4. **Click**: "Commit to main"
 
 #### Step 5: Push to GitHub
@@ -191,7 +169,7 @@ While Git can be used entirely from the command line, we'll use **GitHub Desktop
 #### Step 6: Verify Your Success
 
 1. **Click**: "View on GitHub" button in GitHub Desktop
-2. **You should see**: Your repository on GitHub with the `index.html` file
+2. **You should see**: Your repository on GitHub with the `hello-world.txt` file
 3. **Click on the file**: To view its contents
 4. **Optional**: Enable GitHub Pages to make your site live:
    - Go to "Settings" → "Pages"
@@ -204,17 +182,35 @@ While Git can be used entirely from the command line, we'll use **GitHub Desktop
 
 #### Understanding What Just Happened
 
-**GitHub Desktop translated these Git commands for you:**
-- `git init` → Creating a new repository
-- `git add .` → Staging your files (automatic in GitHub Desktop)
-- `git commit -m "message"` → Making a commit with your message
-- `git push` → Pushing to GitHub
+**GitHub Desktop performed these Git operations for you:**
+
+**1. Repository Creation**
+- Created a new folder on your computer to store your project
+- Set up Git tracking to monitor changes in that folder
+- Connected your local folder to a repository on GitHub
+
+**2. File Tracking**
+- Detected your new `hello-world.txt` file
+- Prepared it to be saved in your project's history
+- This is called "staging" - Git's way of getting ready to save changes
+
+**3. Saving Your Work (Commit)**
+- Took a snapshot of your file exactly as it was
+- Saved this snapshot with your commit message
+- Created a permanent record of this version of your work
+- Each commit has a unique ID so you can find it later
+
+**4. Uploading to GitHub (Push)**
+- Sent your local changes to GitHub's servers
+- Made your work available online
+- Created a backup of your project in the cloud
+- Made it possible for others to see and download your work
 
 **The Visual Interface Shows You:**
-- **Changes tab**: Files you've modified
-- **History tab**: All your commits
-- **Branches**: Different versions of your code
-- **Sync status**: Whether your local and remote repositories match
+- **Changes tab**: Files you've modified but haven't saved to history yet
+- **History tab**: All the snapshots (commits) you've made over time
+- **Branches**: Different versions of your project (like different storylines)
+- **Sync status**: Whether your computer and GitHub have the same version
 
 ---
 
@@ -225,7 +221,7 @@ You've successfully:
 - ✅ Created your first Git repository
 - ✅ Made your first commit
 - ✅ Pushed code to GitHub
-- ✅ Published your first web page
+- ✅ Published your first text file
 
 **You're now a Git user!** 🚀
 
@@ -234,7 +230,7 @@ You've successfully:
 ## Next Steps with GitHub Desktop
 
 1. **Explore the Interface**: Try clicking different tabs and buttons
-2. **Make More Changes**: Edit your HTML file and commit the changes
+2. **Make More Changes**: Edit your text file and commit the changes
 3. **Learn Branching**: Create a new branch for a feature
 4. **Collaborate**: Clone someone else's repository
 5. **Advanced Features**: Explore merge conflicts, stashing, and more
