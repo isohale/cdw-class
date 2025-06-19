@@ -17,22 +17,25 @@ HTML provides the **foundation and framework** for your website. It defines the 
 - Adds images, forms, and other elements
 - Provides meaning and organization to your content
 
-**Example of HTML structure:**
+**Key HTML Elements from our website:**
 ```html
-<!-- This is the main heading of our webpage -->
-<h1>Welcome to My Website</h1>
+<!-- Basic HTML structure -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Module 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Content goes here -->
+  <script src="script.js"></script>
+</body>
+</html>
 
-<!-- This is a paragraph with some text -->
-<p>This is my first website built with HTML, CSS, and JavaScript!</p>
-
-<!-- This creates a button that users can click -->
-<button>Click Me!</button>
-
-<!-- This is a container that holds other elements -->
-<div>
-    <h2>About Me</h2>
-    <p>I'm learning web development.</p>
-</div>
+<!-- Interactive elements with IDs for JavaScript -->
+<button id="demoButton">Click Me!</button>
+<div id="messageDisplay"></div>
 ```
 
 #### **CSS (Cascading Style Sheets) - The Design**
@@ -45,29 +48,28 @@ CSS handles the **styling and visual presentation** of your website. It controls
 - Makes websites responsive (work on different screen sizes)
 - Creates animations and visual effects
 
-**Example of CSS styling:**
+**Key CSS Properties from our website:**
 ```css
-/* This makes the main heading red and centered */
-h1 {
-    color: red;           /* Text color */
-    text-align: center;   /* Center the text */
-    font-size: 24px;      /* Make text bigger */
+/* Basic styling for the page */
+body {
+  font-family: 'Roboto', sans-serif;  /* Set the font */
+  background-color: #ffffff;          /* White background */
+  color: #111;                        /* Dark text color */
+  margin: 0;                          /* Remove default spacing */
 }
 
-/* This styles paragraphs with blue text and some spacing */
-p {
-    color: blue;
-    margin: 10px 0;       /* Add space above and below */
-    line-height: 1.5;     /* Space between lines */
-}
-
-/* This makes the button look nice with a background and border */
+/* Interactive button styling */
 button {
-    background-color: green;    /* Green background */
-    color: white;               /* White text */
-    padding: 10px 20px;         /* Space inside the button */
-    border: none;               /* Remove default border */
-    border-radius: 5px;         /* Rounded corners */
+  background-color: #111;             /* Dark background */
+  color: white;                       /* White text */
+  padding: 12px 24px;                 /* Internal spacing */
+  cursor: pointer;                    /* Hand cursor on hover */
+  transition: background-color 0.3s;  /* Smooth color change */
+}
+
+/* Hover effect for buttons */
+button:hover {
+  background-color: #333;             /* Lighter background on hover */
 }
 ```
 
@@ -82,31 +84,34 @@ JavaScript adds **interactivity and dynamic behavior** to your website. It makes
 - Connects to databases and external services
 - Makes websites dynamic and interactive
 
-**Example of JavaScript functionality:**
+**Key JavaScript Concepts from our website:**
 ```javascript
-// This code runs when the page loads
+// Wait for the page to load before running JavaScript
 document.addEventListener('DOMContentLoaded', function() {
-    // Find the button on our page
-    const button = document.querySelector('button');
     
-    // When someone clicks the button, do something
+    // Find HTML elements using their IDs
+    const button = document.getElementById('demoButton');
+    const messageArea = document.getElementById('messageDisplay');
+    
+    // Add click event listener to the button
     button.addEventListener('click', function() {
-        // Change the button text
-        button.textContent = 'You clicked me!';
+        // Get current time and create a message
+        const currentTime = new Date().toLocaleTimeString();
+        const message = 'Hello! You clicked the button at ' + currentTime;
         
-        // Change the button color
-        button.style.backgroundColor = 'orange';
+        // Display the message in our HTML
+        messageArea.textContent = message;
         
-        // Show a message to the user
-        alert('Hello! You clicked the button!');
+        // Change button text temporarily
+        button.textContent = 'Thanks for clicking!';
     });
 });
 ```
 
 #### **How They Work Together**
-1. **HTML** provides the structure and content
-2. **CSS** makes it look good and organized
-3. **JavaScript** makes it interactive and dynamic
+1. **HTML** provides the structure and content (buttons, text areas)
+2. **CSS** makes it look good and organized (colors, spacing, hover effects)
+3. **JavaScript** makes it interactive and dynamic (responds to clicks, changes content)
 
 ---
 
@@ -123,229 +128,171 @@ While it's possible to put HTML, CSS, and JavaScript all in one file, we'll use 
 
 #### **File Structure**
 ```
-my-website/
-├── index.html      (HTML structure)
-├── styles.css      (CSS styling)
-└── script.js       (JavaScript functionality)
+Building a Website/
+├── index.html      (HTML structure and content)
+├── style.css       (CSS styling and layout)
+├── script.js       (JavaScript functionality)
+└── README.md       (This tutorial)
 ```
 
-#### **HTML File (index.html)**
+#### **HTML File Structure (index.html)**
 ```html
 <!DOCTYPE html>
-<!-- This tells the browser this is an HTML5 document -->
 <html lang="en">
-<!-- The html tag contains everything on the page -->
-
 <head>
-    <!-- The head contains information about the page, not visible content -->
-    
-    <!-- This sets the character encoding for the page -->
-    <meta charset="UTF-8">
-    
-    <!-- This makes the page responsive on mobile devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- This is the title that appears in the browser tab -->
-    <title>My First Website</title>
-    
-    <!-- This links our CSS file to style the page -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Module 1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- The body contains all the visible content on the page -->
+  <header>
+    <div class="left">Columbia GSAPP</div>
+    <div class="center">
+      Computational Design Practices<br>
+      <span>Project Archive</span>
+    </div>
+    <div class="right"><a href="#">About</a></div>
+  </header>
+
+  <main>
+    <div class="project-meta">2025</div>
+    <div class="project-title">Project Title</div>
+    <div class="project-subtitle">Student Name</div>
     
-    <!-- This is the main heading of our website -->
-    <header>
-        <h1>Welcome to My Website</h1>
-        <p>Built with HTML, CSS, and JavaScript</p>
-    </header>
-    
-    <!-- This is the main content area -->
-    <main>
-        <section>
-            <h2>About This Website</h2>
-            <p>This is a simple website created to learn web development fundamentals.</p>
-        </section>
-        
-        <section>
-            <h2>Interactive Elements</h2>
-            <!-- This button will be styled by CSS and made interactive by JavaScript -->
-            <button id="changeColorBtn">Change Background Color</button>
-            <button id="showMessageBtn">Show Message</button>
-        </section>
-    </main>
-    
-    <!-- This is the footer at the bottom of the page -->
-    <footer>
-        <p>&copy; 2024 My First Website. All rights reserved.</p>
-    </footer>
-    
-    <!-- This links our JavaScript file - always put it at the end of the body -->
-    <script src="script.js"></script>
+    <!-- Content sections -->
+    <div class="section-title">Interactive Demo</div>
+    <p>Click the button below to see JavaScript in action:</p>
+    <button id="demoButton">Click Me!</button>
+    <div id="messageDisplay"></div>
+  </main>
+  
+  <script src="script.js"></script>
 </body>
 </html>
 ```
 
-#### **CSS File (styles.css)**
+**Key HTML Concepts:**
+- **Document structure**: DOCTYPE, html, head, body
+- **Linking files**: CSS with `<link>`, JavaScript with `<script>`
+- **Semantic elements**: header, main, div, p, button
+- **IDs and classes**: `id="demoButton"` for JavaScript, `class="section-title"` for CSS
+
+#### **CSS File Structure (style.css)**
 ```css
-/* Reset default browser styles for consistent appearance */
-* {
-    margin: 0;          /* Remove default margins */
-    padding: 0;         /* Remove default padding */
-    box-sizing: border-box; /* Include padding in element width */
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-/* Style the entire body of the page */
 body {
-    font-family: Arial, sans-serif;  /* Choose a nice font */
-    line-height: 1.6;                /* Space between lines */
-    color: #333;                     /* Dark gray text color */
-    background-color: #f4f4f4;       /* Light gray background */
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  color: #111;
+  margin: 0;
+  padding: 0;
 }
 
-/* Style the header section */
-header {
-    background-color: #2c3e50;       /* Dark blue background */
-    color: white;                    /* White text */
-    text-align: center;              /* Center the text */
-    padding: 2rem 0;                 /* Add space inside */
-    margin-bottom: 2rem;             /* Add space below */
-}
-
-/* Style the main heading */
-h1 {
-    font-size: 2.5rem;               /* Large text size */
-    margin-bottom: 0.5rem;           /* Space below the heading */
-}
-
-/* Style all headings */
-h2 {
-    color: #2c3e50;                  /* Dark blue color */
-    margin-bottom: 1rem;             /* Space below headings */
-    border-bottom: 2px solid #3498db; /* Blue underline */
-    padding-bottom: 0.5rem;          /* Space above the line */
-}
-
-/* Style paragraphs */
-p {
-    margin-bottom: 1rem;             /* Space below paragraphs */
-    font-size: 1.1rem;               /* Slightly larger text */
-}
-
-/* Style the main content area */
 main {
-    max-width: 800px;                /* Limit width for readability */
-    margin: 0 auto;                  /* Center the content */
-    padding: 0 20px;                 /* Add space on the sides */
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
-/* Style sections */
-section {
-    background-color: white;         /* White background */
-    padding: 2rem;                   /* Space inside sections */
-    margin-bottom: 2rem;             /* Space between sections */
-    border-radius: 8px;              /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+.section-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 40px;
+  margin-bottom: 12px;
+  font-size: 14px;
 }
 
-/* Style buttons */
 button {
-    background-color: #3498db;       /* Blue background */
-    color: white;                    /* White text */
-    border: none;                    /* Remove default border */
-    padding: 12px 24px;              /* Space inside button */
-    font-size: 1rem;                 /* Button text size */
-    border-radius: 5px;              /* Rounded corners */
-    cursor: pointer;                 /* Hand cursor on hover */
-    margin-right: 10px;              /* Space between buttons */
-    transition: background-color 0.3s; /* Smooth color change */
+  background-color: #111;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-/* Change button color when you hover over it */
 button:hover {
-    background-color: #2980b9;       /* Darker blue on hover */
+  background-color: #333;
 }
 
-/* Style the footer */
-footer {
-    text-align: center;              /* Center the text */
-    padding: 2rem;                   /* Space inside footer */
-    background-color: #2c3e50;       /* Dark background */
-    color: white;                    /* White text */
-    margin-top: 2rem;                /* Space above footer */
+#messageDisplay {
+  margin-top: 20px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  min-height: 20px;
 }
 ```
 
-#### **JavaScript File (script.js)**
+**Key CSS Concepts:**
+- **Selectors**: Element selectors (`body`), class selectors (`.section-title`), ID selectors (`#messageDisplay`)
+- **Properties**: Colors, fonts, spacing, layout
+- **Units**: Pixels (px), percentages (%), viewport units (vw, vh)
+- **Pseudo-classes**: `:hover` for interactive effects
+- **Transitions**: Smooth animations between states
+
+#### **JavaScript File Structure (script.js)**
 ```javascript
-// Wait for the HTML page to fully load before running our JavaScript
 document.addEventListener('DOMContentLoaded', function() {
-    // This function runs when the page is ready
+    console.log('JavaScript is now running!');
     
-    console.log('Website loaded successfully!'); // This shows in browser console
+    // Find HTML elements by their IDs
+    const button = document.getElementById('demoButton');
+    const messageArea = document.getElementById('messageDisplay');
     
-    // Get references to our buttons using their IDs
-    const changeColorBtn = document.getElementById('changeColorBtn');
-    const showMessageBtn = document.getElementById('showMessageBtn');
-    
-    // Array of different background colors we can cycle through
-    const colors = ['#f4f4f4', '#ffe6e6', '#e6ffe6', '#e6e6ff', '#fff2e6'];
-    let currentColorIndex = 0; // Keep track of which color we're on
-    
-    // Add click event listener to the "Change Background Color" button
-    changeColorBtn.addEventListener('click', function() {
-        // Move to the next color in our array
-        currentColorIndex = (currentColorIndex + 1) % colors.length;
+    // Add click event listener to the button
+    button.addEventListener('click', function() {
+        console.log('Button was clicked!');
         
-        // Change the body background color
-        document.body.style.backgroundColor = colors[currentColorIndex];
+        // Create a message with current time
+        const currentTime = new Date().toLocaleTimeString();
+        const message = 'Hello! You clicked the button at ' + currentTime;
         
-        // Show a message to the user
-        alert('Background color changed!');
+        // Display the message in our HTML
+        messageArea.textContent = message;
         
-        // Log the change to the console (for debugging)
-        console.log('Background color changed to:', colors[currentColorIndex]);
+        // Change button text temporarily
+        button.textContent = 'Thanks for clicking!';
+        
+        // Reset button text after 2 seconds
+        setTimeout(function() {
+            button.textContent = 'Click Me!';
+        }, 2000);
     });
-    
-    // Add click event listener to the "Show Message" button
-    showMessageBtn.addEventListener('click', function() {
-        // Create a new paragraph element
-        const newMessage = document.createElement('p');
-        
-        // Set the text content of the new paragraph
-        newMessage.textContent = 'Hello! This message was added by JavaScript!';
-        
-        // Add some styling to make it stand out
-        newMessage.style.color = '#e74c3c';
-        newMessage.style.fontWeight = 'bold';
-        
-        // Find the section with the buttons and add our new message
-        const buttonSection = showMessageBtn.closest('section');
-        buttonSection.appendChild(newMessage);
-        
-        // Show a confirmation message
-        alert('Message added to the page!');
-    });
-    
-    // Add a welcome message when the page loads
-    setTimeout(function() {
-        alert('Welcome to my website! Click the buttons to see some interactivity.');
-    }, 1000); // Wait 1 second before showing the message
 });
 ```
 
-#### **How to Use These Files**
-1. Create a new folder called `my-website`
-2. Create the three files with the exact names shown above
-3. Copy the code into each file
-4. Open `index.html` in your web browser
-5. You should see a styled website with working buttons!
+**Key JavaScript Concepts:**
+- **Event listeners**: Responding to user actions (`click`, `DOMContentLoaded`)
+- **DOM manipulation**: Finding and changing HTML elements
+- **Functions**: Reusable blocks of code
+- **Variables**: Storing data (`const`, `let`)
+- **Timing**: `setTimeout` for delayed actions
+- **Console logging**: Debugging and development tools
 
-#### **What You'll See**
-- A styled website with a header, main content, and footer
-- Two interactive buttons that change the page
-- Responsive design that works on different screen sizes
-- Clean, professional appearance
+#### **How the Files Connect**
+1. **HTML** (`index.html`) contains the structure and links to CSS and JavaScript
+2. **CSS** (`style.css`) styles the HTML elements using selectors
+3. **JavaScript** (`script.js`) finds HTML elements by ID and makes them interactive
 
-This structure teaches you the separation of concerns: HTML for structure, CSS for styling, and JavaScript for behavior!
+**The Connection Points:**
+- HTML links CSS: `<link rel="stylesheet" href="style.css">`
+- HTML links JavaScript: `<script src="script.js"></script>`
+- CSS targets HTML: `#demoButton`, `.section-title`
+- JavaScript finds HTML: `document.getElementById('demoButton')`
+
+#### **Complete Working Website**
+The source code files (`index.html`, `style.css`, `script.js`) contain the complete working website with:
+- **Full HTML structure** with semantic elements and proper organization
+- **Comprehensive CSS styling** with responsive design and interactive effects
+- **Complete JavaScript functionality** with event handling and DOM manipulation
+- **Detailed comments** throughout all files for learning purposes
+
+To see the website in action:
+1. Open `index.html` in any web browser
+2. Click the "Click Me!" button to see JavaScript functionality
+3. Observe how the three files work together to create an interactive experience
+
+This separation of concerns makes the code easier to understand, maintain, and learn from!
