@@ -1,5 +1,6 @@
 # Introduction to Version Control
 ## Git and GitHub
+![logo_02](https://github.com/user-attachments/assets/319dd75f-5b66-425f-bf13-aae537a1f21c)
 
 
 Welcome to this comprehensive tutorial on version control! This guide will walk you through the fundamentals of Git, its history, and how it's used professionally in modern software development.
@@ -124,6 +125,8 @@ While Git can be used entirely from the command line, we'll use **GitHub Desktop
 2. **Install**: Run the installer and follow the setup wizard
 3. **Sign In**: Use your GitHub account credentials
 4. **Verify**: GitHub Desktop should open and show your GitHub repositories
+
+![GithubDesktop_01](https://github.com/user-attachments/assets/b2e48649-397b-4e7b-81fc-edd04e669c8b)
 
 #### Step 2: Create Your First Repository
 
