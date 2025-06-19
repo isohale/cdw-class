@@ -1,7 +1,7 @@
 # Introduction to Version Control
 ## Git and GitHub
 
-![Version Control Illustration](https://www.dropbox.com/scl/fi/nb5rs13k997elvm1a8wpu/logo_01.png?rlkey=9rg3hba2gxl8mms12sulp7boe&dl=0)
+![Version Control Illustration](https://www.google.com/imgres?q=github&imgurl=https%3A%2F%2Fstevemar.net%2Fimages%2Fgeneric%2Fgithub-logo.png&imgrefurl=https%3A%2F%2Fwww.stevemar.net%2Fmove-git-repo-from-ghe-to-gh%2F&docid=wfv2bcpGIUfdlM&tbnid=JD5IM5zC63wasM&vet=12ahUKEwjlsImD0_2NAxXDhYkEHVBVJgcQM3oECEUQAA..i&w=2000&h=665&hcb=2&ved=2ahUKEwjlsImD0_2NAxXDhYkEHVBVJgcQM3oECEUQAA)
 
 Welcome to this comprehensive tutorial on version control! This guide will walk you through the fundamentals of Git, its history, and how it's used professionally in modern software development.
 
