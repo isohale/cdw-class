@@ -1,6 +1,8 @@
 # Introduction to Version Control
 ## Git and GitHub
 
+![Version Control Illustration](https://www.dropbox.com/scl/fi/nb5rs13k997elvm1a8wpu/logo_01.png?rlkey=9rg3hba2gxl8mms12sulp7boe&dl=0)
+
 Welcome to this comprehensive tutorial on version control! This guide will walk you through the fundamentals of Git, its history, and how it's used professionally in modern software development.
 
 ---
@@ -214,7 +216,7 @@ Welcome to version control!
 
 ---
 
-#### Congratulations! 🎉
+#### Congratulations! 
 
 You've successfully:
 - ✅ Installed GitHub Desktop
@@ -223,7 +225,7 @@ You've successfully:
 - ✅ Pushed code to GitHub
 - ✅ Published your first text file
 
-**You're now a Git user!** 🚀
+**You're now a Git user!** 
 
 ---
 
@@ -251,4 +253,3 @@ You've successfully:
 
 ---
 
-*Remember: Both approaches use the same Git under the hood. Start with GitHub Desktop, and when you're comfortable, explore the command line!*
