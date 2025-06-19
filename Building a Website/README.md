@@ -51,25 +51,25 @@ CSS handles the **styling and visual presentation** of your website. It controls
 **Key CSS Properties from our website:**
 ```css
 /* Basic styling for the page */
-body {
-  font-family: 'Roboto', sans-serif;  /* Set the font */
-  background-color: #ffffff;          /* White background */
-  color: #111;                        /* Dark text color */
-  margin: 0;                          /* Remove default spacing */
+body {                              /* Target the entire page body */
+  font-family: 'Roboto', sans-serif;  /* Set the font to Roboto, with sans-serif as backup */
+  background-color: #ffffff;          /* Set background color to white */
+  color: #111;                        /* Set text color to dark gray (almost black) */
+  margin: 0;                          /* Remove default spacing around the body */
 }
 
 /* Interactive button styling */
-button {
-  background-color: #111;             /* Dark background */
-  color: white;                       /* White text */
-  padding: 12px 24px;                 /* Internal spacing */
-  cursor: pointer;                    /* Hand cursor on hover */
-  transition: background-color 0.3s;  /* Smooth color change */
+button {                             /* Target all button elements */
+  background-color: #111;             /* Set button background to dark gray */
+  color: white;                       /* Set button text color to white */
+  padding: 12px 24px;                 /* Add 12px top/bottom, 24px left/right spacing inside */
+  cursor: pointer;                    /* Change mouse cursor to hand when hovering over button */
+  transition: background-color 0.3s;  /* Smooth color change animation (0.3 seconds) */
 }
 
 /* Hover effect for buttons */
-button:hover {
-  background-color: #333;             /* Lighter background on hover */
+button:hover {                       /* Apply styles when user hovers over button */
+  background-color: #333;             /* Change background to lighter gray on hover */
 }
 ```
 
@@ -87,23 +87,23 @@ JavaScript adds **interactivity and dynamic behavior** to your website. It makes
 **Key JavaScript Concepts from our website:**
 ```javascript
 // Wait for the page to load before running JavaScript
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {  // Listen for when HTML is fully loaded
     
     // Find HTML elements using their IDs
-    const button = document.getElementById('demoButton');
-    const messageArea = document.getElementById('messageDisplay');
+    const button = document.getElementById('demoButton');      // Get the button element by its ID
+    const messageArea = document.getElementById('messageDisplay');  // Get the message area element by its ID
     
     // Add click event listener to the button
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function() {              // Listen for clicks on the button
         // Get current time and create a message
-        const currentTime = new Date().toLocaleTimeString();
-        const message = 'Hello! You clicked the button at ' + currentTime;
+        const currentTime = new Date().toLocaleTimeString();   // Get current time as a string
+        const message = 'Hello! You clicked the button at ' + currentTime;  // Create message with time
         
         // Display the message in our HTML
-        messageArea.textContent = message;
+        messageArea.textContent = message;                     // Put the message in the HTML element
         
         // Change button text temporarily
-        button.textContent = 'Thanks for clicking!';
+        button.textContent = 'Thanks for clicking!';           // Change what the button says
     });
 });
 ```
@@ -137,37 +137,37 @@ Building a Website/
 
 #### **HTML File Structure (index.html)**
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Module 1</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<!DOCTYPE html>                      <!-- Declares this is an HTML5 document -->
+<html lang="en">                     <!-- Root element, lang="en" specifies English language -->
+<head>                               <!-- Contains metadata about the page (not visible) -->
+  <meta charset="UTF-8">             <!-- Sets character encoding for special characters -->
+  <title>Module 1</title>            <!-- Title that appears in browser tab -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">  <!-- Load Google Fonts -->
+  <link rel="stylesheet" href="style.css">  <!-- Links to our CSS file for styling -->
 </head>
-<body>
-  <header>
-    <div class="left">Columbia GSAPP</div>
-    <div class="center">
-      Computational Design Practices<br>
-      <span>Project Archive</span>
+<body>                               <!-- Contains all visible content on the page -->
+  <header>                           <!-- Header section for navigation/branding -->
+    <div class="left">Columbia GSAPP</div>  <!-- Left side of header with institution name -->
+    <div class="center">             <!-- Center section of header -->
+      Computational Design Practices<br>    <!-- Main title with line break -->
+      <span>Project Archive</span>   <!-- Subtitle in smaller text -->
     </div>
-    <div class="right"><a href="#">About</a></div>
+    <div class="right"><a href="#">About</a></div>  <!-- Right side with navigation link -->
   </header>
 
-  <main>
-    <div class="project-meta">2025</div>
-    <div class="project-title">Project Title</div>
-    <div class="project-subtitle">Student Name</div>
+  <main>                             <!-- Main content area of the page -->
+    <div class="project-meta">2025</div>     <!-- Project year/date -->
+    <div class="project-title">Project Title</div>  <!-- Main project title -->
+    <div class="project-subtitle">Student Name</div>  <!-- Student name as subtitle -->
     
     <!-- Content sections -->
-    <div class="section-title">Interactive Demo</div>
-    <p>Click the button below to see JavaScript in action:</p>
-    <button id="demoButton">Click Me!</button>
-    <div id="messageDisplay"></div>
+    <div class="section-title">Interactive Demo</div>  <!-- Section heading -->
+    <p>Click the button below to see JavaScript in action:</p>  <!-- Instructions for user -->
+    <button id="demoButton">Click Me!</button>  <!-- Interactive button with unique ID -->
+    <div id="messageDisplay"></div>  <!-- Empty container for JavaScript to fill with messages -->
   </main>
   
-  <script src="script.js"></script>
+  <script src="script.js"></script>  <!-- Links to our JavaScript file for interactivity -->
 </body>
 </html>
 ```
@@ -180,49 +180,49 @@ Building a Website/
 
 #### **CSS File Structure (style.css)**
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');  /* Import Google Fonts */
 
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #ffffff;
-  color: #111;
-  margin: 0;
-  padding: 0;
+body {                              /* Target the entire page body */
+  font-family: 'Roboto', sans-serif;  /* Set the font to Roboto, with sans-serif as backup */
+  background-color: #ffffff;          /* Set background color to white */
+  color: #111;                        /* Set text color to dark gray (almost black) */
+  margin: 0;                          /* Remove default spacing around the body */
+  padding: 0;                         /* Remove default internal spacing */
 }
 
-main {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 0 20px;
+main {                               /* Target the main content area */
+  max-width: 800px;                   /* Limit the maximum width to 800 pixels */
+  margin: 60px auto;                  /* Add 60px top/bottom margin, center horizontally */
+  padding: 0 20px;                    /* Add 20px left/right padding, no top/bottom */
 }
 
-.section-title {
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-top: 40px;
-  margin-bottom: 12px;
-  font-size: 14px;
+.section-title {                      /* Target elements with class="section-title" */
+  font-weight: 700;                   /* Make the text bold */
+  text-transform: uppercase;          /* Convert text to all capital letters */
+  margin-top: 40px;                   /* Add 40 pixels of space above this element */
+  margin-bottom: 12px;                /* Add 12 pixels of space below this element */
+  font-size: 14px;                    /* Set font size to 14 pixels */
 }
 
-button {
-  background-color: #111;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+button {                              /* Target all button elements */
+  background-color: #111;             /* Set button background to dark gray */
+  color: white;                       /* Set button text color to white */
+  border: none;                       /* Remove the default button border */
+  padding: 12px 24px;                 /* Add 12px top/bottom, 24px left/right spacing inside */
+  cursor: pointer;                    /* Change mouse cursor to hand when hovering over button */
+  transition: background-color 0.3s;  /* Smooth color change animation (0.3 seconds) */
 }
 
-button:hover {
-  background-color: #333;
+button:hover {                        /* Apply styles when user hovers over button */
+  background-color: #333;             /* Change background to lighter gray on hover */
 }
 
-#messageDisplay {
-  margin-top: 20px;
-  padding: 16px;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
-  min-height: 20px;
+#messageDisplay {                     /* Target element with id="messageDisplay" */
+  margin-top: 20px;                   /* Add 20 pixels of space above this element */
+  padding: 16px;                      /* Add 16 pixels of spacing inside the element */
+  border: 1px solid #ccc;             /* Add a light gray border around the element */
+  background-color: #f9f9f9;          /* Set background color to very light gray */
+  min-height: 20px;                   /* Set minimum height so the area is visible even when empty */
 }
 ```
 
@@ -235,31 +235,31 @@ button:hover {
 
 #### **JavaScript File Structure (script.js)**
 ```javascript
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('JavaScript is now running!');
+document.addEventListener('DOMContentLoaded', function() {  // Wait for HTML to fully load before running code
+    console.log('JavaScript is now running!');              // Print message to browser console for debugging
     
     // Find HTML elements by their IDs
-    const button = document.getElementById('demoButton');
-    const messageArea = document.getElementById('messageDisplay');
+    const button = document.getElementById('demoButton');      // Get the button element by its ID
+    const messageArea = document.getElementById('messageDisplay');  // Get the message area element by its ID
     
     // Add click event listener to the button
-    button.addEventListener('click', function() {
-        console.log('Button was clicked!');
+    button.addEventListener('click', function() {              // Listen for clicks on the button
+        console.log('Button was clicked!');                    // Print message to console when button is clicked
         
         // Create a message with current time
-        const currentTime = new Date().toLocaleTimeString();
-        const message = 'Hello! You clicked the button at ' + currentTime;
+        const currentTime = new Date().toLocaleTimeString();   // Get current time as a readable string
+        const message = 'Hello! You clicked the button at ' + currentTime;  // Create message combining text and time
         
         // Display the message in our HTML
-        messageArea.textContent = message;
+        messageArea.textContent = message;                     // Put the message text into the HTML element
         
         // Change button text temporarily
-        button.textContent = 'Thanks for clicking!';
+        button.textContent = 'Thanks for clicking!';           // Change what the button displays
         
         // Reset button text after 2 seconds
-        setTimeout(function() {
-            button.textContent = 'Click Me!';
-        }, 2000);
+        setTimeout(function() {                                // Run a function after a delay
+            button.textContent = 'Click Me!';                  // Change button text back to original
+        }, 2000);                                              // Wait 2000 milliseconds (2 seconds)
     });
 });
 ```
@@ -284,15 +284,4 @@ document.addEventListener('DOMContentLoaded', function() {
 - JavaScript finds HTML: `document.getElementById('demoButton')`
 
 #### **Complete Working Website**
-The source code files (`index.html`, `style.css`, `script.js`) contain the complete working website with:
-- **Full HTML structure** with semantic elements and proper organization
-- **Comprehensive CSS styling** with responsive design and interactive effects
-- **Complete JavaScript functionality** with event handling and DOM manipulation
-- **Detailed comments** throughout all files for learning purposes
-
-To see the website in action:
-1. Open `index.html` in any web browser
-2. Click the "Click Me!" button to see JavaScript functionality
-3. Observe how the three files work together to create an interactive experience
-
-This separation of concerns makes the code easier to understand, maintain, and learn from!
+The source code files (`index.html`, `style.css`, `script.js`) can be found in the `Building a Website` directory.
