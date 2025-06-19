@@ -125,6 +125,8 @@ While Git can be used entirely from the command line, we'll use **GitHub Desktop
 3. **Sign In**: Use your GitHub account credentials
 4. **Verify**: GitHub Desktop should open and show your GitHub repositories
 
+![GithubDesktop_01](https://github.com/user-attachments/assets/b2e48649-397b-4e7b-81fc-edd04e669c8b)
+
 #### Step 2: Create Your First Repository
 
 1. **Open GitHub Desktop**
