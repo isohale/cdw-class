@@ -7,10 +7,8 @@ Welcome to the world of web development! This tutorial will teach you the fundam
 
 ### 1  The Role of HTML, CSS and JavaScript
 
-Think of building a website like building a house:
-
 #### **HTML (HyperText Markup Language) - The Structure**
-HTML is like the **foundation and framework** of a house. It provides the basic structure and content.
+HTML provides the **foundation and framework** for your website. It defines the basic structure and content.
 
 **What HTML does:**
 - Defines the structure of your webpage
@@ -38,7 +36,7 @@ HTML is like the **foundation and framework** of a house. It provides the basic 
 ```
 
 #### **CSS (Cascading Style Sheets) - The Design**
-CSS is like the **paint, furniture, and decorations** of a house. It makes everything look beautiful and organized.
+CSS handles the **styling and visual presentation** of your website. It controls how everything looks and is arranged.
 
 **What CSS does:**
 - Controls colors, fonts, and text styling
@@ -74,7 +72,7 @@ button {
 ```
 
 #### **JavaScript - The Interactivity**
-JavaScript is like the **electrical system and smart features** of a house. It makes things happen when users interact with your website.
+JavaScript adds **interactivity and dynamic behavior** to your website. It makes things happen when users interact with your page.
 
 **What JavaScript does:**
 - Responds to user actions (clicks, typing, etc.)
